@@ -32,6 +32,44 @@
   const completeSummaryEl = document.getElementById("complete-summary");
   const doneBtn = document.getElementById("done-btn");
 
+  let audioCtx = null;
+
+  function getAudioContext() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioCtx = new AudioContextClass();
+    }
+    if (audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  }
+
+  function playChime() {
+    const ctx = getAudioContext();
+    const now = ctx.currentTime;
+    const notes = [
+      { freq: 880, start: 0, duration: 0.15 },
+      { freq: 1318.51, start: 0.12, duration: 0.28 },
+      { freq: 1046.5, start: 0.55, duration: 0.08 },
+      { freq: 1046.5, start: 0.7, duration: 0.08 },
+      { freq: 1046.5, start: 0.85, duration: 0.08 },
+    ];
+    notes.forEach(({ freq, start, duration }) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0, now + start);
+      gain.gain.linearRampToValueAtTime(0.3125, now + start + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + start + duration);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now + start);
+      osc.stop(now + start + duration + 0.05);
+    });
+  }
+
   let exercisesById = new Map();
   let allExercises = [];
   let pauseAfterEachExercise = localStorage.getItem(PAUSE_AFTER_KEY) === "true";
@@ -100,6 +138,7 @@
   }
 
   function startSession(sequence, label, routineId) {
+    getAudioContext();
     if (session && session.timerHandle) clearInterval(session.timerHandle);
     session = {
       sequence,
@@ -161,6 +200,7 @@
       session.secondsLeft -= 1;
       updateTimerDisplay();
       if (session.secondsLeft <= 0) {
+        playChime();
         clearInterval(session.timerHandle);
         session.timerHandle = null;
         if (pauseAfterEachExercise) {
