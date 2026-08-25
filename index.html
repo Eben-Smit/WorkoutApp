@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Workout</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b0f0e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Workout">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="home-screen" class="screen">
+  <header class="home-header">
+    <h1>Today's Workout</h1>
+  </header>
+
+  <button id="random-btn" class="random-btn" type="button">
+    <span class="random-btn-title">Random 10</span>
+    <span class="random-btn-sub">10 exercises, shuffled</span>
+  </button>
+
+  <section aria-labelledby="routines-heading">
+    <h2 id="routines-heading" class="section-heading">Curated Workouts</h2>
+    <div id="routine-list" class="routine-list"></div>
+  </section>
+</main>
+
+<main id="session-screen" class="screen" hidden>
+  <header class="session-header">
+    <div class="session-progress">
+      <span id="session-title"></span>
+      <span id="session-count"></span>
+    </div>
+    <div class="session-controls">
+      <button id="pause-btn" class="icon-btn" type="button" aria-label="Pause">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+      <button id="home-btn" class="icon-btn" type="button" aria-label="Go home">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="exercise-media" class="exercise-media">
+    <img id="exercise-image" class="exercise-image" alt="" hidden>
+    <div id="exercise-fallback" class="exercise-fallback" hidden>
+      <svg viewBox="0 0 512 512" class="fallback-icon" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="34" stroke-linecap="round" fill="none">
+          <line x1="112" y1="256" x2="400" y2="256"/>
+          <line x1="96" y1="192" x2="96" y2="320"/>
+          <line x1="416" y1="192" x2="416" y2="320"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="exercise-info">
+    <h2 id="exercise-name" class="exercise-name"></h2>
+    <p id="exercise-description" class="exercise-description"></p>
+  </div>
+
+  <div class="timer-area">
+    <div id="timer-bar" class="timer-bar"><div id="timer-bar-fill" class="timer-bar-fill"></div></div>
+    <div class="timer-row">
+      <label class="mode-toggle" title="Pause after each exercise">
+        <span id="mode-toggle-label" class="mode-toggle-label">Flow</span>
+        <span class="toggle-switch">
+          <input type="checkbox" id="pause-after-toggle">
+          <span class="toggle-slider"></span>
+        </span>
+      </label>
+      <div id="timer-value" class="timer-value">35</div>
+      <button id="next-btn" class="next-btn" type="button">Next</button>
+    </div>
+  </div>
+</main>
+
+<main id="complete-screen" class="screen" hidden>
+  <div class="complete-content">
+    <h1>Workout Complete</h1>
+    <p id="complete-summary" class="complete-summary"></p>
+    <button id="done-btn" class="done-btn" type="button">Done</button>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

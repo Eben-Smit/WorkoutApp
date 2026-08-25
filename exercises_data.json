@@ -1,0 +1,1036 @@
+{
+  "exercises": [
+    {
+      "id": "shoulder-rolls",
+      "name": "Shoulder Rolls",
+      "description": "Roll Shoulders and back in a smooth circular motion",
+      "image": "shoulder-rolls.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "world-s-greatest-stretch",
+      "name": "World's Greatest Stretch",
+      "description": "Lunch forward, Rotate torso arm down on elbow, arm to ceiling, hammy stretch. Repeat other side",
+      "image": "world-s-greatest-stretch.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "pike-push-ups",
+      "name": "Pike Push-ups",
+      "description": "Hips high (V); elbow to ground push up",
+      "image": "pike-push-ups.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "dumbbell-thrusters",
+      "name": "Dumbbell Thrusters",
+      "description": "Squad Down with dumbbells on shoulders, then press overhead as you stand to ceiling",
+      "image": "dumbbell-thrusters.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "dumbbell-clean-press",
+      "name": "Dumbbell Clean & Press",
+      "description": "Pull dumbell to shoulders from ground, then press overhead, back down to touch ground",
+      "image": "dumbbell-clean-press.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "romanian-deadlift",
+      "name": "Romanian Deadlift",
+      "description": "Keep knees soft, lower back to put dumbbells to shins.",
+      "image": "romanian-deadlift.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "burpees",
+      "name": "Burpees",
+      "description": "Squad down, jump back, chest down, then jump up",
+      "image": "burpees.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "push-ups",
+      "name": "Push-Ups",
+      "description": "Lower chest to almost touch ground, press back up",
+      "image": "push-ups.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "jump-rope",
+      "name": "Jump Rope",
+      "description": "Mimic jump rope motion, jumping quickly with small hops",
+      "image": "jump-rope.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "cat-cow",
+      "name": "Cat & Cow",
+      "description": "All fours, spine up cat, belly down cow",
+      "image": "cat-cow.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "v-ups",
+      "name": "V-Ups",
+      "description": "Lift arms and legs up together to form a V",
+      "image": "v-ups.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "side-plank-reach-through-left",
+      "name": "Side Plank Reach-Through (Left)",
+      "description": "From side plank, reach under torso, then reach to sky - left",
+      "image": "side-plank-reach-through-left.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "side-plank-reach-through-right",
+      "name": "Side Plank Reach-Through (Right)",
+      "description": "From side plank, reach under torso, then reach to sky - right",
+      "image": "side-plank-reach-through-right.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "arm-circles",
+      "name": "Arm Circles",
+      "description": "Extend arms, rotate in small, then large circles, both directions",
+      "image": "arm-circles.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "arnold-press",
+      "name": "Arnold Press",
+      "description": "Start dumbbells in front of chest, rotate outward, press overhead",
+      "image": "arnold-press.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "triceps-kickbacks",
+      "name": "Triceps Kickbacks",
+      "description": "Hinge hips, extend elbows back and keep elbows locked, cycle from chest to back",
+      "image": "triceps-kickbacks.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "shoulder-taps",
+      "name": "Shoulder Taps",
+      "description": "From plank, touch opposite shoulder without shifting your hips",
+      "image": "shoulder-taps.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "high-knees",
+      "name": "High Knees",
+      "description": "Palms flat out, run in place driving knees to chest fast",
+      "image": "high-knees.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "mountain-climbers",
+      "name": "Mountain Climbers",
+      "description": "From plank, drive knees quickly towards chest",
+      "image": "mountain-climbers.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "knee-hugs",
+      "name": "Knee Hugs",
+      "description": "Pull one knee to chest, maintain balance, alternate",
+      "image": "knee-hugs.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "sumo-squat",
+      "name": "Sumo Squat",
+      "description": "Dumbbell between legs, squat wide, keep chest up while lifting",
+      "image": "sumo-squat.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "glute-bridge-marches",
+      "name": "Glute Bridge Marches",
+      "description": "Lift hips up, then alternate lifting knees to chest",
+      "image": "glute-bridge-marches.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "curtsy-lunges",
+      "name": "Curtsy Lunges",
+      "description": "Step one leg behind and across the other, then lower, lift arms",
+      "image": "curtsy-lunges.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "wall-sits",
+      "name": "Wall Sits",
+      "description": "Sit against the wall with knees bent 90 degrees, arms up",
+      "image": "wall-sits.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "jumping-jacks",
+      "name": "Jumping Jacks",
+      "description": "Jump feet out, while raising arms overhead, then return",
+      "image": "jumping-jacks.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "inchworms",
+      "name": "Inchworms",
+      "description": "Bend down, walk your hand forward into Plank, then return",
+      "image": "inchworms.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "flutter-kicks",
+      "name": "Flutter Kicks",
+      "description": "Alternate kicking your legs quickly off the ground",
+      "image": "flutter-kicks.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "seated-leg-tucks",
+      "name": "Seated Leg Tucks",
+      "description": "Tuck knees toward chest and extend legs back out",
+      "image": "seated-leg-tucks.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "kettlebell-halo",
+      "name": "Kettlebell Halo",
+      "description": "Pass Kettlebell atround your head in circular motion, then reverse direction",
+      "image": "kettlebell-halo.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "hip-cars-standing",
+      "name": "Hip CARs (Standing)",
+      "description": "Lift knee forward, rotate to back in circular motion, extend and touch toe to ground",
+      "image": "hip-cars-standing.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "suitcase-deadlift",
+      "name": "Suitcase Deadlift",
+      "description": "Deadlift kettlebell with one hand beside body, switch sides",
+      "image": "suitcase-deadlift.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "superman-pulldown",
+      "name": "Superman Pulldown",
+      "description": "While in superman position, reach elbows back down sides (uplifted)",
+      "image": "superman-pulldown.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "bird-dogs",
+      "name": "Bird Dogs",
+      "description": "Extend opposite arm and leg, while balancing oh hand and knee, switch",
+      "image": "bird-dogs.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "heel-touches",
+      "name": "Heel Touches",
+      "description": "Touch your heels side to side while crunching your abs",
+      "image": "heel-touches.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "y-t-w-raises",
+      "name": "Y-T-W Raises",
+      "description": "Lie face down, move arms into Y T W shapes (move on floor, then lift up for each position)",
+      "image": "y-t-w-raises.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "bicep-curls",
+      "name": "Bicep Curls",
+      "description": "Lift weight from bottom to top, both arms",
+      "image": "bicep-curls.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "lateral-raise",
+      "name": "Lateral Raise",
+      "description": "Raise dumbbells out to side shoulder level, from body",
+      "image": "lateral-raise.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "hammer-curls",
+      "name": "Hammer Curls",
+      "description": "Dumbbell Curls from bottom to top with palms faced in",
+      "image": "hammer-curls.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "overhead-triceps-extension",
+      "name": "Overhead Triceps Extension",
+      "description": "Pull dumbbell (1) triceps behind head",
+      "image": "overhead-triceps-extension.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "shrugs",
+      "name": "Shrugs",
+      "description": "Hold Dumbbells beside body, shrug shoulders up, squeeze and tuck, then relax",
+      "image": "shrugs.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "butt-kicks",
+      "name": "Butt Kicks",
+      "description": "Jog in place while kicking heels towards your glutes",
+      "image": "butt-kicks.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "skater-hops",
+      "name": "Skater Hops",
+      "description": "Jump side to side while landing softly on one foot",
+      "image": "skater-hops.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "plank-to-push-up",
+      "name": "Plank to Push-Up",
+      "description": "Lower from hands to elbows and push back up to plank",
+      "image": "plank-to-push-up.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "scapula-push-ups-warm-up",
+      "name": "Scapula Push-Ups (Warm-Up)",
+      "description": "Keep arms straight, retract and contract shoulder blades in plank position",
+      "image": "scapula-push-ups-warm-up.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "side-plank-abduction-left-right",
+      "name": "Side Plank Abduction (Left/Right)",
+      "description": "In side plank, lift your left / right leg upward while keeping balance",
+      "image": "side-plank-abduction-left-right.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "jump-squats",
+      "name": "Jump Squats",
+      "description": "Squat down and explode upward into a jump",
+      "image": "jump-squats.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "plank-to-downward-dog",
+      "name": "Plank to Downward Dog",
+      "description": "plank to pike, push hips back, repeat",
+      "image": null,
+      "hasImage": false,
+      "hasDescription": true
+    },
+    {
+      "id": "arm-swings",
+      "name": "Arm Swings",
+      "description": "swing arms across chest and open wide alternate quickly",
+      "image": "arm-swings.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "walking-toe-touches-warm-up",
+      "name": "Walking Toe Touches (Warm-Up)",
+      "description": "Walk forward, reaching opposite hand to opposite foot each step",
+      "image": "walking-toe-touches-warm-up.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "dumbbell-snatches",
+      "name": "Dumbbell Snatches",
+      "description": "lift dumbbell from ground with one hand in one quick motion, switch hands above head, put down and repeat with other hand",
+      "image": "dumbbell-snatches.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "renegade-rows",
+      "name": "Renegade Rows",
+      "description": "In Plank row one dumbbell up at a time, alternate",
+      "image": "renegade-rows.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "marching-in-place",
+      "name": "Marching in Place",
+      "description": "lift knees high while marching on the spot",
+      "image": "marching-in-place.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "goblet-squat",
+      "name": "Goblet Squat",
+      "description": "hold dumbbell at chest and perform a deep squat",
+      "image": "goblet-squat.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "front-plank",
+      "name": "Front Plank",
+      "description": "hold body straight from shoulders to heels, on elbows, tighten core",
+      "image": "front-plank.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "hip-circles-quadruped",
+      "name": "Hip Circles (Quadruped)",
+      "description": "on hands and knees, circle one knee outward and around",
+      "image": "hip-circles-quadruped.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "around-the-world-kettlebell",
+      "name": "Around the World (Kettlebell)",
+      "description": "pass kettlebell around waist in a circular motion",
+      "image": "around-the-world-kettlebell.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "clean-press-kettlebell",
+      "name": "Clean & Press (Kettlebell)",
+      "description": "Lift kettlebell to shoulder, press overhead in one fluid motion, return to ground and repeat",
+      "image": "clean-press-kettlebell.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "bear-crawls",
+      "name": "Bear Crawls",
+      "description": "Crawl forward and backwards on hand and knees, with knees low off the ground",
+      "image": "bear-crawls.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "leg-swings-front-back",
+      "name": "Leg Swings (Front/Back)",
+      "description": "swing one leg forward and backward, keep torso stable, also swing arms",
+      "image": "leg-swings-front-back.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "kettlebell-swing-single-arm-l-r",
+      "name": "Kettlebell Swing (Single Arm, L/R)",
+      "description": "Swing kettlebell forward with one arm, from between legs, to shoulder height",
+      "image": "kettlebell-swing-single-arm-l-r.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "russian-twists",
+      "name": "Russian Twists",
+      "description": "Hold dumbbell while seated with feet up, move dumbbell side to side while twisting torso.",
+      "image": "russian-twists.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "dumbbell-deadlift",
+      "name": "Dumbbell Deadlift",
+      "description": null,
+      "image": null,
+      "hasImage": false,
+      "hasDescription": false
+    },
+    {
+      "id": "dumbbell-lunges",
+      "name": "Dumbbell Lunges",
+      "description": "hold dumbbells at sides while stepping into lunges",
+      "image": "dumbbell-lunges.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "hip-circles-standing",
+      "name": "Hip Circles (Standing)",
+      "description": "draw slow and controlled circles with your hips, hands on hips",
+      "image": "hip-circles-standing.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "front-rack-squat",
+      "name": "Front Rack Squat",
+      "description": "Hold dumbbells at shoulders, squat down, then return standing",
+      "image": "front-rack-squat.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "deadlift-to-high-pull",
+      "name": "Deadlift to High Pull",
+      "description": "Deadlift dumbbells from ground, pull to shoulders with elbow high, lower to chins",
+      "image": "deadlift-to-high-pull.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "skull-crushers",
+      "name": "Skull Crushers",
+      "description": "Lie back extend arms up, lower dumbbells to ears, repeat",
+      "image": "skull-crushers.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "leg-swings-side-to-side",
+      "name": "Leg Swings (Side to Side)",
+      "description": "Left / Right move arms",
+      "image": null,
+      "hasImage": false,
+      "hasDescription": true
+    },
+    {
+      "id": "tricep-dips",
+      "name": "Tricep Dips",
+      "description": null,
+      "image": "tricep-dips.jpg",
+      "hasImage": true,
+      "hasDescription": false
+    },
+    {
+      "id": "bicycle-crunches",
+      "name": "Bicycle Crunches",
+      "description": null,
+      "image": "bicycle-crunches.jpg",
+      "hasImage": true,
+      "hasDescription": false
+    },
+    {
+      "id": "superman-holds",
+      "name": "Superman Holds",
+      "description": null,
+      "image": null,
+      "hasImage": false,
+      "hasDescription": false
+    },
+    {
+      "id": "bear-plank",
+      "name": "Bear Plank",
+      "description": null,
+      "image": null,
+      "hasImage": false,
+      "hasDescription": false
+    },
+    {
+      "id": "reverse-lunges",
+      "name": "Reverse Lunges",
+      "description": null,
+      "image": null,
+      "hasImage": false,
+      "hasDescription": false
+    },
+    {
+      "id": "bridge-walkouts",
+      "name": "Bridge Walkouts",
+      "description": null,
+      "image": null,
+      "hasImage": false,
+      "hasDescription": false
+    },
+    {
+      "id": "dumbbell-plank-pull-throughs",
+      "name": "Dumbbell Plank Pull-Throughs",
+      "description": "pull dumbbell through from left to right, switch and back",
+      "image": null,
+      "hasImage": false,
+      "hasDescription": true
+    },
+    {
+      "id": "walking-lunges",
+      "name": "Walking Lunges",
+      "description": "Step forward into lunge, knee to ground, 2 steps, with dumbbells, turn around and repeat",
+      "image": "walking-lunges.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    },
+    {
+      "id": "t-spine-openers",
+      "name": "T-Spine Openers",
+      "description": "On hands and knees, rotate one arm to 180 degrees from front",
+      "image": "t-spine-openers.jpg",
+      "hasImage": true,
+      "hasDescription": true
+    }
+  ],
+  "routines": [
+    {
+      "id": 1,
+      "title": "PUSH POWER + COMBAT CARDIO",
+      "meta": "Beginner, dumbbells, yoga mat optional, full body, 7 mins, 15s breathers",
+      "sequence": [
+        "shoulder-rolls",
+        "world-s-greatest-stretch",
+        "pike-push-ups",
+        "dumbbell-thrusters",
+        "dumbbell-clean-press",
+        "romanian-deadlift",
+        "burpees",
+        "push-ups",
+        "jump-rope"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "CORE FIRELINE",
+      "meta": "Beginner, dumbbells, yoga mat optional, core, 7 mins, 15s breathers",
+      "sequence": [
+        "cat-cow",
+        "v-ups",
+        "side-plank-reach-through-left",
+        "side-plank-reach-through-right",
+        "jump-rope",
+        "v-ups",
+        "side-plank-reach-through-left",
+        "side-plank-reach-through-right",
+        "jump-rope"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "TACTICAL POWER PUSH",
+      "meta": "Beginner, dumbbells, yoga mat optional, arms, 7 mins, 15s breathers",
+      "sequence": [
+        "arm-circles",
+        "arnold-press",
+        "pike-push-ups",
+        "triceps-kickbacks",
+        "shoulder-taps",
+        "high-knees",
+        "mountain-climbers"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "STABILITY BUILDER",
+      "meta": "Beginner, dumbbells, yoga mat optional, core, legs, 7 mins, 15s breathers",
+      "sequence": [
+        "knee-hugs",
+        "sumo-squat",
+        "glute-bridge-marches",
+        "curtsy-lunges",
+        "wall-sits",
+        "jumping-jacks"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "CORE + MOBILITY MIX",
+      "meta": "Beginner, dumbbells, yoga mat optional, core, legs, 7 mins, 15s breathers",
+      "sequence": [
+        "world-s-greatest-stretch",
+        "inchworms",
+        "flutter-kicks",
+        "seated-leg-tucks",
+        "kettlebell-halo",
+        "inchworms",
+        "flutter-kicks",
+        "seated-leg-tucks",
+        "kettlebell-halo"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "POSTERIOR CHAIN RELOAD",
+      "meta": "Beginner, dumbbells, yoga mat optional, full body, 7 mins, 15s breathers",
+      "sequence": [
+        "hip-cars-standing",
+        "suitcase-deadlift",
+        "romanian-deadlift",
+        "superman-pulldown",
+        "glute-bridge-marches",
+        "bird-dogs",
+        "heel-touches",
+        "jump-rope"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "WEIGHTED UPPER BODY BUILDER",
+      "meta": "Beginner, dumbbells, yoga mat optional, full body, 7 mins, 15s breathers",
+      "sequence": [
+        "y-t-w-raises",
+        "bicep-curls",
+        "lateral-raise",
+        "hammer-curls",
+        "overhead-triceps-extension",
+        "shrugs",
+        "pike-push-ups",
+        "mountain-climbers"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "COMBAT CONDITIONING BLAST",
+      "meta": "Beginner, dumbbells, yoga mat optional, full body, 7 mins, 15s breathers",
+      "sequence": [
+        "butt-kicks",
+        "skater-hops",
+        "jumping-jacks",
+        "plank-to-push-up",
+        "jump-rope",
+        "skater-hops",
+        "jumping-jacks",
+        "plank-to-push-up",
+        "jump-rope"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "UPPER STRENGTH + CONDITIONING",
+      "meta": "Beginner, dumbbells, yoga mat optional, upper body, 8 mins, 15s breathers",
+      "sequence": [
+        "scapula-push-ups-warm-up",
+        "arm-circles",
+        "bicep-curls",
+        "triceps-kickbacks",
+        "shrugs",
+        "side-plank-abduction-left-right",
+        "jumping-jacks",
+        "high-knees",
+        "mountain-climbers",
+        "jump-squats"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "STRENGTH SUPERSETS",
+      "meta": "Beginner, dumbbells, yoga mat optional, full body, 10 mins, 30s breathers",
+      "sequence": [
+        "t-spine-openers",
+        "butt-kicks",
+        "walking-lunges",
+        "shoulder-taps",
+        "jump-rope",
+        "walking-lunges",
+        "shoulder-taps",
+        "jump-rope",
+        "hammer-curls",
+        "plank-to-push-up",
+        "skater-hops",
+        "hammer-curls",
+        "plank-to-push-up",
+        "skater-hops",
+        "overhead-triceps-extension",
+        "russian-twists",
+        "high-knees",
+        "overhead-triceps-extension",
+        "russian-twists",
+        "high-knees"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "CORE & CONDITIONING SUPERSETS",
+      "meta": "Beginner, dumbbells, yoga mat optional, core, 10 mins, 30s breathers",
+      "sequence": [
+        "cat-cow",
+        "plank-to-downward-dog",
+        "v-ups",
+        "seated-leg-tucks",
+        "jump-rope",
+        "v-ups",
+        "seated-leg-tucks",
+        "jump-rope",
+        "superman-pulldown",
+        "side-plank-reach-through-left",
+        "side-plank-reach-through-right",
+        "burpees",
+        "superman-pulldown",
+        "side-plank-reach-through-left",
+        "side-plank-reach-through-right",
+        "burpees",
+        "flutter-kicks",
+        "heel-touches",
+        "jumping-jacks",
+        "flutter-kicks",
+        "heel-touches",
+        "jumping-jacks"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "WEIGHTED CONDITIONING",
+      "meta": "Beginner, dumbbells, yoga mat optional, full body, 12 mins, 30s breathers",
+      "sequence": [
+        "arm-swings",
+        "walking-toe-touches-warm-up",
+        "dumbbell-snatches",
+        "lateral-raise",
+        "renegade-rows",
+        "inchworms",
+        "jump-rope",
+        "dumbbell-snatches",
+        "lateral-raise",
+        "renegade-rows",
+        "inchworms",
+        "jump-rope",
+        "dumbbell-snatches",
+        "lateral-raise",
+        "renegade-rows",
+        "inchworms",
+        "jump-rope"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "FULL BODY INTRO BURN",
+      "meta": "Intermediate, dumbbells, yoga mat optional, full body, 12 mins, 30s breathers",
+      "sequence": [
+        "marching-in-place",
+        "arm-circles",
+        "goblet-squat",
+        "push-ups",
+        "mountain-climbers",
+        "romanian-deadlift",
+        "high-knees",
+        "front-plank",
+        "goblet-squat",
+        "push-ups",
+        "mountain-climbers",
+        "romanian-deadlift",
+        "high-knees",
+        "front-plank"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "TACTICAL HYBRID TRAINING",
+      "meta": "Intermediate, dumbbells, yoga mat optional, full body, 14 mins, 30s breathers",
+      "sequence": [
+        "hip-circles-quadruped",
+        "y-t-w-raises",
+        "around-the-world-kettlebell",
+        "push-ups",
+        "clean-press-kettlebell",
+        "kettlebell-halo",
+        "bear-crawls",
+        "front-plank",
+        "around-the-world-kettlebell",
+        "push-ups",
+        "clean-press-kettlebell",
+        "kettlebell-halo",
+        "bear-crawls",
+        "front-plank"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "POSTERIOR CHAIN + CARDIO CORE",
+      "meta": "Intermediate, dumbbells, yoga mat optional, lower body, 15 mins, 30s breathers",
+      "sequence": [
+        "leg-swings-front-back",
+        "hip-cars-standing",
+        "goblet-squat",
+        "suitcase-deadlift",
+        "kettlebell-swing-single-arm-l-r",
+        "russian-twists",
+        "side-plank-abduction-left-right",
+        "jumping-jacks",
+        "goblet-squat",
+        "suitcase-deadlift",
+        "kettlebell-swing-single-arm-l-r",
+        "russian-twists",
+        "side-plank-abduction-left-right",
+        "jumping-jacks"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "NAVY SEAL TRAINING",
+      "meta": "Intermediate, dumbbells, yoga mat optional, lower body, 15 mins, 30s breathers",
+      "sequence": [
+        "walking-toe-touches-warm-up",
+        "leg-swings-front-back",
+        "glute-bridge-marches",
+        "dumbbell-deadlift",
+        "dumbbell-lunges",
+        "inchworms",
+        "jump-rope",
+        "goblet-squat",
+        "glute-bridge-marches",
+        "dumbbell-deadlift",
+        "dumbbell-lunges",
+        "inchworms",
+        "jump-rope",
+        "goblet-squat",
+        "glute-bridge-marches",
+        "dumbbell-deadlift",
+        "dumbbell-lunges",
+        "inchworms",
+        "jump-rope",
+        "goblet-squat"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "DUMBBELL STRENGTH",
+      "meta": "Intermediate, dumbbells, yoga mat optional, lower body, 15 mins, 30s breathers",
+      "sequence": [
+        "scapula-push-ups-warm-up",
+        "hip-circles-standing",
+        "front-rack-squat",
+        "arnold-press",
+        "deadlift-to-high-pull",
+        "skull-crushers",
+        "high-knees",
+        "front-rack-squat",
+        "arnold-press",
+        "deadlift-to-high-pull",
+        "skull-crushers",
+        "high-knees",
+        "front-rack-squat",
+        "arnold-press",
+        "deadlift-to-high-pull",
+        "skull-crushers",
+        "high-knees"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "MIXED CONDITIONING CHALLENGE",
+      "meta": "Intermediate, dumbbells, yoga mat optional, full body, 16 mins, 30s breathers",
+      "sequence": [
+        "marching-in-place",
+        "shoulder-rolls",
+        "jump-rope",
+        "burpees",
+        "plank-to-push-up",
+        "clean-press-kettlebell",
+        "clean-press-kettlebell",
+        "kettlebell-swing-single-arm-l-r",
+        "mountain-climbers",
+        "mountain-climbers",
+        "jump-rope",
+        "jump-rope",
+        "burpees",
+        "burpees",
+        "plank-to-push-up",
+        "clean-press-kettlebell",
+        "clean-press-kettlebell",
+        "kettlebell-swing-single-arm-l-r",
+        "mountain-climbers",
+        "mountain-climbers"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "GLUTES AND LEGS FOCUS",
+      "meta": "Intermediate, dumbbells, yoga mat optional, full body, 20 mins, 30s breathers",
+      "sequence": [
+        "knee-hugs",
+        "leg-swings-side-to-side",
+        "sumo-squat",
+        "glute-bridge-marches",
+        "curtsy-lunges",
+        "wall-sits",
+        "jump-squats",
+        "jump-rope",
+        "sumo-squat",
+        "glute-bridge-marches",
+        "curtsy-lunges",
+        "wall-sits",
+        "jump-squats",
+        "jump-rope"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "FINAL CHALLENGE",
+      "meta": "Intermediate, dumbbells, yoga mat optional, full body, 20 mins, 30s breathers",
+      "sequence": [
+        "world-s-greatest-stretch",
+        "cat-cow",
+        "push-ups",
+        "goblet-squat",
+        "dumbbell-snatches",
+        "v-ups",
+        "burpees",
+        "push-ups",
+        "goblet-squat",
+        "dumbbell-snatches",
+        "v-ups",
+        "burpees",
+        "push-ups",
+        "goblet-squat",
+        "dumbbell-snatches",
+        "v-ups",
+        "burpees",
+        "tricep-dips",
+        "bicycle-crunches",
+        "superman-holds",
+        "bear-plank",
+        "reverse-lunges",
+        "bridge-walkouts",
+        "dumbbell-plank-pull-throughs",
+        "side-plank-reach-through-left",
+        "side-plank-reach-through-right",
+        "triceps-kickbacks"
+      ]
+    }
+  ]
+}
