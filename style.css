@@ -307,13 +307,19 @@ body {
   flex-shrink: 0;
 }
 
+.timer-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 .timer-bar {
-  width: 100%;
+  flex: 1;
   height: 8px;
   background: var(--bg-raised-2);
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 10px;
 }
 
 .timer-bar-fill {
@@ -324,33 +330,18 @@ body {
   transition: transform 1s linear;
 }
 
-.timer-row {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 12px;
-}
-
-.timer-row .mode-toggle {
-  justify-self: start;
-}
-
-.timer-row .next-btn {
-  justify-self: center;
-}
-
-.timer-row .timer-value {
-  justify-self: end;
-}
-
 .timer-value {
-  font-size: 2.2rem;
+  flex-shrink: 0;
+  min-width: 2.2ch;
+  font-size: 1.5rem;
   font-weight: 700;
+  text-align: right;
   color: var(--cyan);
   font-variant-numeric: tabular-nums;
 }
 
 .next-btn {
+  width: 100%;
   background: var(--green);
   color: #06120a;
   border: none;
@@ -361,7 +352,6 @@ body {
   font-family: inherit;
   cursor: pointer;
   min-height: 68px;
-  min-width: 300px;
 }
 
 .next-btn:active {
