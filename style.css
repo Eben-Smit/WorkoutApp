@@ -100,31 +100,28 @@ body {
   background: var(--cyan);
 }
 
-.random-btn {
+.random-row {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  width: 100%;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.random-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: linear-gradient(135deg, var(--green-dim), var(--green));
   color: #06120a;
   border: none;
-  border-radius: 16px;
-  padding: 18px 20px;
-  margin-bottom: 28px;
+  border-radius: 14px;
+  padding: 14px 8px;
   font-family: inherit;
-  cursor: pointer;
-  min-height: 64px;
-}
-
-.random-btn-title {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 700;
-}
-
-.random-btn-sub {
-  font-size: 0.85rem;
-  opacity: 0.8;
+  cursor: pointer;
+  min-height: 56px;
 }
 
 .section-heading {

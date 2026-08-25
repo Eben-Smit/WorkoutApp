@@ -13,7 +13,7 @@
   const completeScreen = document.getElementById("complete-screen");
 
   const routineListEl = document.getElementById("routine-list");
-  const randomBtn = document.getElementById("random-btn");
+  const randomButtons = document.querySelectorAll(".random-btn");
   const pauseAfterToggle = document.getElementById("pause-after-toggle");
   const modeToggleLabelEl = document.getElementById("mode-toggle-label");
 
@@ -90,13 +90,13 @@
     }
   }
 
-  function pickRandomTen() {
+  function pickRandom(count) {
     const pool = [...allExercises];
     for (let i = pool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [pool[i], pool[j]] = [pool[j], pool[i]];
     }
-    return pool.slice(0, 10).map((e) => e.id);
+    return pool.slice(0, count).map((e) => e.id);
   }
 
   function startSession(sequence, label, routineId) {
@@ -241,7 +241,10 @@
   homeBtn.addEventListener("click", goHome);
   pauseBtn.addEventListener("click", togglePause);
   doneBtn.addEventListener("click", () => showScreen(homeScreen));
-  randomBtn.addEventListener("click", () => startSession(pickRandomTen(), "Random 10", null));
+  randomButtons.forEach((btn) => {
+    const count = Number(btn.dataset.count);
+    btn.addEventListener("click", () => startSession(pickRandom(count), `Random ${count}`, null));
+  });
 
   fetch("exercises_data.json")
     .then((res) => res.json())

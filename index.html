@@ -22,10 +22,11 @@
     <h1>Today's Workout</h1>
   </header>
 
-  <button id="random-btn" class="random-btn" type="button">
-    <span class="random-btn-title">Random 10</span>
-    <span class="random-btn-sub">10 exercises, shuffled</span>
-  </button>
+  <div class="random-row">
+    <button class="random-btn" type="button" data-count="10">Random 10</button>
+    <button class="random-btn" type="button" data-count="15">Random 15</button>
+    <button class="random-btn" type="button" data-count="20">Random 20</button>
+  </div>
 
   <section aria-labelledby="routines-heading">
     <h2 id="routines-heading" class="section-heading">Curated Workouts</h2>
