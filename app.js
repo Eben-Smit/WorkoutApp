@@ -70,6 +70,30 @@
     });
   }
 
+  let wakeLock = null;
+
+  async function requestWakeLock() {
+    if (!("wakeLock" in navigator)) return;
+    try {
+      wakeLock = await navigator.wakeLock.request("screen");
+    } catch (err) {
+      // Wake lock unavailable (e.g. low battery, unsupported) — degrade silently.
+    }
+  }
+
+  function releaseWakeLock() {
+    if (wakeLock) {
+      wakeLock.release();
+      wakeLock = null;
+    }
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && session) {
+      requestWakeLock();
+    }
+  });
+
   let exercisesById = new Map();
   let allExercises = [];
   let pauseAfterEachExercise = localStorage.getItem(PAUSE_AFTER_KEY) === "true";
@@ -139,6 +163,7 @@
 
   function startSession(sequence, label, routineId) {
     getAudioContext();
+    requestWakeLock();
     if (session && session.timerHandle) clearInterval(session.timerHandle);
     session = {
       sequence,
@@ -268,12 +293,14 @@
     });
     completeSummaryEl.textContent = `${session.label} — ${session.sequence.length} exercises`;
     session = null;
+    releaseWakeLock();
     showScreen(completeScreen);
   }
 
   function goHome() {
     if (session && session.timerHandle) clearInterval(session.timerHandle);
     session = null;
+    releaseWakeLock();
     showScreen(homeScreen);
   }
 
