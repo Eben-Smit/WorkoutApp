@@ -1,6 +1,6 @@
 {
   "name": "Workout App",
-  "short_name": "WorkoutApp",
+  "short_name": "WorkItOut",
   "description": "Daily guided workout player",
   "start_url": "./index.html",
   "scope": "./",
