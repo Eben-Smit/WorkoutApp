@@ -226,7 +226,7 @@ body {
   font-size: 0.75rem;
   color: var(--text-dim);
   min-width: 34px;
-  text-align: right;
+  text-align: left;
 }
 
 #session-title {
