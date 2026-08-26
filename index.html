@@ -41,6 +41,20 @@
       <span id="session-count"></span>
     </div>
     <div class="session-controls">
+      <button id="settings-btn" class="icon-btn" type="button" aria-label="Settings">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="3.2"/>
+          <circle cx="12" cy="12" r="7.5"/>
+          <line x1="12" y1="2.5" x2="12" y2="4.7"/>
+          <line x1="12" y1="19.3" x2="12" y2="21.5"/>
+          <line x1="2.5" y1="12" x2="4.7" y2="12"/>
+          <line x1="19.3" y1="12" x2="21.5" y2="12"/>
+          <line x1="5.3" y1="5.3" x2="6.8" y2="6.8"/>
+          <line x1="17.2" y1="17.2" x2="18.7" y2="18.7"/>
+          <line x1="5.3" y1="18.7" x2="6.8" y2="17.2"/>
+          <line x1="17.2" y1="6.8" x2="18.7" y2="5.3"/>
+        </svg>
+      </button>
       <button id="pause-btn" class="icon-btn" type="button" aria-label="Pause">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
       </button>
@@ -83,6 +97,65 @@
     <button id="next-btn" class="next-btn" type="button">Next</button>
   </div>
 </main>
+
+<main id="rest-screen" class="screen" hidden>
+  <header class="session-header">
+    <div class="session-progress">
+      <span>Rest</span>
+      <span id="rest-count"></span>
+    </div>
+    <div class="session-controls">
+      <button id="rest-settings-btn" class="icon-btn" type="button" aria-label="Settings">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="3.2"/>
+          <circle cx="12" cy="12" r="7.5"/>
+          <line x1="12" y1="2.5" x2="12" y2="4.7"/>
+          <line x1="12" y1="19.3" x2="12" y2="21.5"/>
+          <line x1="2.5" y1="12" x2="4.7" y2="12"/>
+          <line x1="19.3" y1="12" x2="21.5" y2="12"/>
+          <line x1="5.3" y1="5.3" x2="6.8" y2="6.8"/>
+          <line x1="17.2" y1="17.2" x2="18.7" y2="18.7"/>
+          <line x1="5.3" y1="18.7" x2="6.8" y2="17.2"/>
+          <line x1="17.2" y1="6.8" x2="18.7" y2="5.3"/>
+        </svg>
+      </button>
+      <button id="rest-home-btn" class="icon-btn" type="button" aria-label="Go home">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="rest-content">
+    <p class="rest-label">Take a breather...</p>
+    <div id="rest-timer-value" class="rest-timer-value">60</div>
+    <div class="rest-bar"><div id="rest-bar-fill" class="rest-bar-fill"></div></div>
+  </div>
+
+  <button id="continue-btn" class="next-btn" type="button">Continue</button>
+</main>
+
+<div id="settings-overlay" class="modal-overlay" hidden>
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2>Settings</h2>
+      <button id="settings-close-btn" class="icon-btn" type="button" aria-label="Close settings">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+      </button>
+    </div>
+    <label class="settings-field">
+      <span>Exercise duration (seconds)</span>
+      <input type="number" id="setting-exercise-seconds" inputmode="numeric" min="5" max="600" step="1">
+    </label>
+    <label class="settings-field">
+      <span>Exercises before a rest (0 = off)</span>
+      <input type="number" id="setting-rest-every" inputmode="numeric" min="0" max="50" step="1">
+    </label>
+    <label class="settings-field">
+      <span>Rest duration (seconds)</span>
+      <input type="number" id="setting-rest-seconds" inputmode="numeric" min="5" max="600" step="1">
+    </label>
+  </div>
+</div>
 
 <main id="complete-screen" class="screen" hidden>
   <div class="complete-content">

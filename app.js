@@ -1,15 +1,17 @@
 (() => {
   "use strict";
 
-  const EXERCISE_SECONDS = 35;
   const HISTORY_KEY = "workoutHistory";
   const PAUSE_AFTER_KEY = "pauseAfterEachExercise";
+  const SETTINGS_KEY = "workoutSettings";
+  const DEFAULT_SETTINGS = { exerciseSeconds: 35, restEvery: 0, restSeconds: 60 };
 
   const PAUSE_ICON = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
   const PLAY_ICON = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
 
   const homeScreen = document.getElementById("home-screen");
   const sessionScreen = document.getElementById("session-screen");
+  const restScreen = document.getElementById("rest-screen");
   const completeScreen = document.getElementById("complete-screen");
 
   const routineListEl = document.getElementById("routine-list");
@@ -31,6 +33,20 @@
 
   const completeSummaryEl = document.getElementById("complete-summary");
   const doneBtn = document.getElementById("done-btn");
+
+  const restCountEl = document.getElementById("rest-count");
+  const restTimerValueEl = document.getElementById("rest-timer-value");
+  const restBarFillEl = document.getElementById("rest-bar-fill");
+  const continueBtn = document.getElementById("continue-btn");
+  const restHomeBtn = document.getElementById("rest-home-btn");
+
+  const settingsBtn = document.getElementById("settings-btn");
+  const restSettingsBtn = document.getElementById("rest-settings-btn");
+  const settingsOverlay = document.getElementById("settings-overlay");
+  const settingsCloseBtn = document.getElementById("settings-close-btn");
+  const exerciseSecondsInput = document.getElementById("setting-exercise-seconds");
+  const restEveryInput = document.getElementById("setting-rest-every");
+  const restSecondsInput = document.getElementById("setting-rest-seconds");
 
   let audioCtx = null;
 
@@ -109,10 +125,84 @@
     modeToggleLabelEl.textContent = pauseAfterEachExercise ? "Pause" : "Flow";
   }
 
+  function loadSettings() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(SETTINGS_KEY));
+      return { ...DEFAULT_SETTINGS, ...(stored || {}) };
+    } catch {
+      return { ...DEFAULT_SETTINGS };
+    }
+  }
+
+  function clampInt(value, min, max, fallback) {
+    const n = parseInt(value, 10);
+    if (Number.isNaN(n)) return fallback;
+    return Math.min(Math.max(n, min), max);
+  }
+
+  let settings = loadSettings();
+  let settingsAutoPaused = false;
+  let settingsAutoPausedRest = false;
+
+  function applySettingsToInputs() {
+    exerciseSecondsInput.value = settings.exerciseSeconds;
+    restEveryInput.value = settings.restEvery;
+    restSecondsInput.value = settings.restSeconds;
+  }
+
+  function saveSettingsFromInputs() {
+    settings = {
+      exerciseSeconds: clampInt(exerciseSecondsInput.value, 5, 600, DEFAULT_SETTINGS.exerciseSeconds),
+      restEvery: clampInt(restEveryInput.value, 0, 50, DEFAULT_SETTINGS.restEvery),
+      restSeconds: clampInt(restSecondsInput.value, 5, 600, DEFAULT_SETTINGS.restSeconds),
+    };
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+  }
+
+  function openSettings() {
+    applySettingsToInputs();
+    if (session && session.timerHandle && !session.paused) {
+      session.paused = true;
+      clearInterval(session.timerHandle);
+      session.timerHandle = null;
+      updatePauseButton();
+      settingsAutoPaused = true;
+    }
+    if (session && session.restTimerHandle) {
+      clearInterval(session.restTimerHandle);
+      session.restTimerHandle = null;
+      settingsAutoPausedRest = true;
+    }
+    settingsOverlay.hidden = false;
+  }
+
+  function closeSettings() {
+    saveSettingsFromInputs();
+    applySettingsToInputs();
+    settingsOverlay.hidden = true;
+    if (settingsAutoPaused && session) {
+      settingsAutoPaused = false;
+      session.paused = false;
+      runTimer();
+      updatePauseButton();
+    }
+    if (settingsAutoPausedRest && session) {
+      settingsAutoPausedRest = false;
+      runRestTimer();
+    }
+  }
+
+  settingsBtn.addEventListener("click", openSettings);
+  restSettingsBtn.addEventListener("click", openSettings);
+  settingsCloseBtn.addEventListener("click", closeSettings);
+  settingsOverlay.addEventListener("click", (e) => {
+    if (e.target === settingsOverlay) closeSettings();
+  });
+
   let session = null; // { sequence, index, label, routineId, timerHandle, secondsLeft, timerIndex, paused }
 
   function showScreen(screen) {
-    for (const s of [homeScreen, sessionScreen, completeScreen]) {
+    for (const s of [homeScreen, sessionScreen, restScreen, completeScreen]) {
       s.hidden = s !== screen;
     }
   }
@@ -171,9 +261,11 @@
       label,
       routineId: routineId ?? null,
       timerHandle: null,
-      secondsLeft: EXERCISE_SECONDS,
+      secondsLeft: settings.exerciseSeconds,
       timerIndex: 0,
       paused: false,
+      restTimerHandle: null,
+      restSecondsLeft: 0,
     };
     sessionTitleEl.textContent = label;
     showScreen(sessionScreen);
@@ -211,7 +303,7 @@
 
   function startTimer() {
     session.paused = false;
-    session.secondsLeft = EXERCISE_SECONDS;
+    session.secondsLeft = settings.exerciseSeconds;
     session.timerIndex = session.index;
     updateTimerDisplay();
     updatePauseButton();
@@ -262,7 +354,7 @@
   function updateTimerDisplay() {
     const secondsLeft = Math.max(session.secondsLeft, 0);
     timerValueEl.textContent = secondsLeft;
-    const elapsedFraction = (EXERCISE_SECONDS - secondsLeft) / EXERCISE_SECONDS;
+    const elapsedFraction = (settings.exerciseSeconds - secondsLeft) / settings.exerciseSeconds;
     timerBarFillEl.style.transform = `scaleX(${elapsedFraction})`;
   }
 
@@ -278,9 +370,49 @@
     session.index += 1;
     if (session.index >= session.sequence.length) {
       finishSession();
+    } else if (settings.restEvery > 0 && session.index % settings.restEvery === 0) {
+      startRest();
     } else {
       renderCurrentExercise();
     }
+  }
+
+  function startRest() {
+    restCountEl.textContent = `${session.index} / ${session.sequence.length} done`;
+    showScreen(restScreen);
+    session.restSecondsLeft = settings.restSeconds;
+    updateRestDisplay();
+    runRestTimer();
+  }
+
+  function runRestTimer() {
+    if (session.restTimerHandle) clearInterval(session.restTimerHandle);
+    session.restTimerHandle = setInterval(() => {
+      session.restSecondsLeft -= 1;
+      updateRestDisplay();
+      if (session.restSecondsLeft <= 0) {
+        clearInterval(session.restTimerHandle);
+        session.restTimerHandle = null;
+        playChime();
+      }
+    }, 1000);
+  }
+
+  function updateRestDisplay() {
+    const secondsLeft = Math.max(session.restSecondsLeft, 0);
+    restTimerValueEl.textContent = secondsLeft;
+    const fraction = (settings.restSeconds - secondsLeft) / settings.restSeconds;
+    restBarFillEl.style.transform = `scaleX(${Math.min(Math.max(fraction, 0), 1)})`;
+  }
+
+  function continueFromRest() {
+    if (!session) return;
+    if (session.restTimerHandle) {
+      clearInterval(session.restTimerHandle);
+      session.restTimerHandle = null;
+    }
+    showScreen(sessionScreen);
+    renderCurrentExercise();
   }
 
   function finishSession() {
@@ -298,7 +430,10 @@
   }
 
   function goHome() {
-    if (session && session.timerHandle) clearInterval(session.timerHandle);
+    if (session) {
+      if (session.timerHandle) clearInterval(session.timerHandle);
+      if (session.restTimerHandle) clearInterval(session.restTimerHandle);
+    }
     session = null;
     releaseWakeLock();
     showScreen(homeScreen);
@@ -307,6 +442,8 @@
   nextBtn.addEventListener("click", () => advance());
   homeBtn.addEventListener("click", goHome);
   pauseBtn.addEventListener("click", togglePause);
+  continueBtn.addEventListener("click", continueFromRest);
+  restHomeBtn.addEventListener("click", goHome);
   doneBtn.addEventListener("click", () => showScreen(homeScreen));
   randomButtons.forEach((btn) => {
     const count = Number(btn.dataset.count);
