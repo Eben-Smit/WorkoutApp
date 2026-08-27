@@ -34,13 +34,17 @@ than rewriting in Swift.
     exercise `id`s. Some routines have fewer than 10 exercises and may repeat
     an exercise within the same routine — that's intentional (original circuit
     structure), not a bug to fix.
-- **`exercise_images/`** — 69 `.jpg` photos, one per exercise that has one.
-  Filename = `{id}.jpg`. Full original resolution.
+- **`images-female/`** and **`images-male/`** — two parallel photo sets, one per
+  exercise that has a photo in that set. Filename = `{id}.jpg` in both folders.
+  A Settings toggle picks which set is shown; the app falls back to the other
+  set (then to the generic fallback icon) if a given exercise's photo is
+  missing from the selected set, so the two folders don't need to stay in
+  perfect sync.
 
 Treat this library as a living dataset, not a fixed one. Missing photos will be
 filled in over time, and new exercises/workouts will likely be added later — so
-build assuming the counts (77 exercises, 20 routines, 69 photos) will change,
-rather than hardcoding them.
+build assuming the counts (77 exercises, 20 routines, 69 photos per set) will
+change, rather than hardcoding them.
 
 ## Core app behavior
 - **Home / "today's workout" screen** — two options:

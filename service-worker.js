@@ -1,4 +1,4 @@
-const CACHE_NAME = "workout-app-v2";
+const CACHE_NAME = "workout-app-v3";
 
 const APP_SHELL = [
   "./",
@@ -22,8 +22,20 @@ self.addEventListener("install", (event) => {
         const data = await res.json();
         const imageUrls = data.exercises
           .filter((e) => e.hasImage)
-          .map((e) => `exercise_images/${e.image}`);
-        await cache.addAll(imageUrls);
+          .flatMap((e) => [`images-female/${e.image}`, `images-male/${e.image}`]);
+
+        // Cache each image individually (not cache.addAll) so a photo that
+        // only exists in one set doesn't block caching the rest.
+        await Promise.all(
+          imageUrls.map(async (url) => {
+            try {
+              const imgRes = await fetch(url);
+              if (imgRes.ok) await cache.put(url, imgRes);
+            } catch (err) {
+              // Image missing for this set — skip it silently.
+            }
+          })
+        );
       } catch (err) {
         // Data fetch failed during install; app shell is still cached.
       }

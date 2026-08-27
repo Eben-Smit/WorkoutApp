@@ -3,6 +3,7 @@
 
   const HISTORY_KEY = "workoutHistory";
   const PAUSE_AFTER_KEY = "pauseAfterEachExercise";
+  const PHOTO_SET_KEY = "photoSet";
   const SETTINGS_KEY = "workoutSettings";
   const DEFAULT_SETTINGS = { exerciseSeconds: 35, restEvery: 0, restSeconds: 60 };
 
@@ -47,6 +48,8 @@
   const exerciseSecondsInput = document.getElementById("setting-exercise-seconds");
   const restEveryInput = document.getElementById("setting-rest-every");
   const restSecondsInput = document.getElementById("setting-rest-seconds");
+  const photoSetToggle = document.getElementById("setting-photo-set");
+  const photoSetLabelEl = document.getElementById("photo-set-label");
 
   let audioCtx = null;
 
@@ -123,6 +126,24 @@
 
   function updateModeToggleLabel() {
     modeToggleLabelEl.textContent = pauseAfterEachExercise ? "Pause" : "Flow";
+  }
+
+  let photoSet = localStorage.getItem(PHOTO_SET_KEY) === "male" ? "male" : "female";
+  photoSetToggle.checked = photoSet === "male";
+  updatePhotoSetLabel();
+  photoSetToggle.addEventListener("change", () => {
+    photoSet = photoSetToggle.checked ? "male" : "female";
+    localStorage.setItem(PHOTO_SET_KEY, photoSet);
+    updatePhotoSetLabel();
+    renderExerciseImage();
+  });
+
+  function updatePhotoSetLabel() {
+    photoSetLabelEl.textContent = photoSet === "male" ? "Male" : "Female";
+  }
+
+  function photoFolder(set) {
+    return set === "male" ? "images-male" : "images-female";
   }
 
   function loadSettings() {
@@ -272,33 +293,48 @@
     renderCurrentExercise();
   }
 
+  let currentExercise = null;
+
   function renderCurrentExercise() {
     const id = session.sequence[session.index];
     const exercise = exercisesById.get(id);
+    currentExercise = exercise || null;
 
     sessionCountEl.textContent = `${session.index + 1} / ${session.sequence.length}`;
 
     if (exercise) {
       exerciseNameEl.textContent = exercise.name;
       exerciseDescriptionEl.textContent = exercise.hasDescription ? exercise.description : "";
-
-      if (exercise.hasImage) {
-        exerciseImageEl.src = `exercise_images/${exercise.image}`;
-        exerciseImageEl.alt = exercise.name;
-        exerciseImageEl.hidden = false;
-        exerciseFallbackEl.hidden = true;
-      } else {
-        exerciseImageEl.hidden = true;
-        exerciseFallbackEl.hidden = false;
-      }
     } else {
       exerciseNameEl.textContent = id;
       exerciseDescriptionEl.textContent = "";
-      exerciseImageEl.hidden = true;
-      exerciseFallbackEl.hidden = false;
     }
 
+    renderExerciseImage();
     startTimer();
+  }
+
+  function renderExerciseImage() {
+    const exercise = currentExercise;
+    if (!exercise || !exercise.hasImage) {
+      exerciseImageEl.hidden = true;
+      exerciseFallbackEl.hidden = false;
+      return;
+    }
+
+    const otherSet = photoSet === "male" ? "female" : "male";
+    exerciseImageEl.onerror = () => {
+      exerciseImageEl.onerror = () => {
+        exerciseImageEl.onerror = null;
+        exerciseImageEl.hidden = true;
+        exerciseFallbackEl.hidden = false;
+      };
+      exerciseImageEl.src = `${photoFolder(otherSet)}/${exercise.image}`;
+    };
+    exerciseImageEl.src = `${photoFolder(photoSet)}/${exercise.image}`;
+    exerciseImageEl.alt = exercise.name;
+    exerciseImageEl.hidden = false;
+    exerciseFallbackEl.hidden = true;
   }
 
   function startTimer() {
